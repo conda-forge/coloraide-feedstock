@@ -1,5 +1,5 @@
 {% set name = "coloraide" %}
-{% set version = "1.2" %}
+{% set version = "1.5" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/coloraide-{{ version }}.tar.gz
-  sha256: 06af31bdaadd0ec3ff835bf522ef1fceda7523b95d86d5be766e145b6c857376
+  sha256: f62068f9abd1aab6c14a55205defae64c07e0db7936c06e82b8df822c984c6e3
 
 build:
   noarch: python
@@ -18,7 +18,7 @@ requirements:
   host:
     - pip
     - python >=3.6
-    - hatchling 
+    - hatchling
   run:
     - python >=3.6
 
