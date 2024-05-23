@@ -1,5 +1,7 @@
 {% set name = "coloraide" %}
-{% set version = "1.2" %}
+{% set version = "3.3.1" %}
+{% set sha256 = "bb945bc61aa08ac0927fdaec5a1052a8b30e64e5e31c4c94f1e706a7617297d8" %}
+{% set build_number = "0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,20 +9,20 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/coloraide-{{ version }}.tar.gz
-  sha256: 06af31bdaadd0ec3ff835bf522ef1fceda7523b95d86d5be766e145b6c857376
+  sha256: {{ sha256 }}
 
 build:
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
-  number: 0
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
+  number: {{ build_number }}
 
 requirements:
   host:
+    - python >=3.8
+    - hatchling >=0.21.1
     - pip
-    - python >=3.6
-    - hatchling 
   run:
-    - python >=3.6
+    - python >=3.8
 
 test:
   imports:
@@ -42,3 +44,5 @@ about:
 extra:
   recipe-maintainers:
     - seantycho
+    - mfisher87
+    - rushirajnenuji
