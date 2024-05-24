@@ -1,6 +1,6 @@
 {% set name = "coloraide" %}
-{% set version = "3.3.1" %}
-{% set sha256 = "bb945bc61aa08ac0927fdaec5a1052a8b30e64e5e31c4c94f1e706a7617297d8" %}
+{% set version = "0.18.1" %}
+{% set sha256 = "0de316de9d49faaf4fd4cff804ed4526e5549ba445dc0e92a50847caf6736066" %}
 {% set build_number = "0" %}
 
 package:
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python >=3.6
     - hatchling >=0.21.1
     - pip
   run:
-    - python >=3.8
+    - python >=3.6
 
 test:
   imports:
