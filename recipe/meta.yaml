@@ -1,6 +1,6 @@
 {% set name = "coloraide" %}
-{% set version = "4.0" %}
-{% set sha256 = "13efcc3dc3da716b7fd5aaf6e71d9259bb064b10a74888be2a56b6fc49c5e238" %}
+{% set version = "4.0.1" %}
+{% set sha256 = "45ae7dd69d60b9e1fa9f13459f3bea3f2ceecf65a6b9120fa7b0b44af293f137" %}
 {% set build_number = 0 %}
 
 package:
@@ -8,7 +8,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/coloraide-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/coloraide-{{ version }}.tar.gz
   sha256: {{ sha256 }}
 
 build:
