@@ -1,7 +1,7 @@
 {% set name = "coloraide" %}
 {% set version = "4.1" %}
 {% set sha256 = "8c57823227ba941f60a2d59b46cc023d6d3e4c6ae065117e40717391569e9f7d" %}
-{% set build_number = 0 %}
+{% set build_number = 1 %}
 
 package:
   name: {{ name|lower }}
@@ -18,11 +18,11 @@ build:
 
 requirements:
   host:
-    - python >=3.8
+    - python {{ python_min }}
     - hatchling >=0.21.1
     - pip
   run:
-    - python >=3.8
+    - python >={{ python_min }}
 
 test:
   imports:
@@ -31,6 +31,7 @@ test:
     - pip check
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://pypi.org/project/coloraide/
