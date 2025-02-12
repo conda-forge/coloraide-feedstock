@@ -44,6 +44,7 @@ about:
 
 extra:
   recipe-maintainers:
+    - username
     - seantycho
     - mfisher87
     - rushirajnenuji
