@@ -1,6 +1,6 @@
 {% set name = "coloraide" %}
-{% set version = "4.2.2" %}
-{% set sha256 = "a2e4a7dfead299b5256c90d114154e1ddb67a0f9391059b92dc9a0a23456c716" %}
+{% set version = "4.3" %}
+{% set sha256 = "e1d3dcd5b9350e2e1e1ebc85394760d7428f9823fa7003dbc1b541a79cf5763e" %}
 {% set build_number = 0 %}
 
 package:
@@ -23,6 +23,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
+    - typing-extensions
 
 test:
   imports:
