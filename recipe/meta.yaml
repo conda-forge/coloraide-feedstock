@@ -23,6 +23,7 @@ requirements:
     - pip
   run:
     - python >={{ python_min }}
+    - typing-extensions  # [py<=3.10]
 
 test:
   imports:
