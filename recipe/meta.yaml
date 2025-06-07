@@ -1,6 +1,6 @@
 {% set name = "coloraide" %}
-{% set version = "4.6" %}
-{% set sha256 = "e41ce60210476d88e18093a32973a2f046bc3a4e778871bb14e7f2f817f88f6a" %}
+{% set version = "4.7" %}
+{% set sha256 = "42e253715f5e00dfee6ee8020e659260e5edf7522c0630a09fa8a637ef6230e8" %}
 {% set build_number = 0 %}
 
 package:
