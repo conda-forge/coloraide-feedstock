@@ -1,20 +1,18 @@
 {% set name = "coloraide" %}
 {% set version = "8.10" %}
-{% set sha256 = "0120503a297181d7236c378297b6ad98b0da4e11bd99fd2500778b8485557a9e" %}
-{% set build_number = 0 %}
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: "{{ name|lower }}"
+  version: "{{ version }}"
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/coloraide-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
+  sha256: 0120503a297181d7236c378297b6ad98b0da4e11bd99fd2500778b8485557a9e
 
 build:
+  number: 0
   noarch: python
-  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
-  number: {{ build_number }}
+  script: "{{ PYTHON }} -m pip install . --no-deps --no-build-isolation --no-cache-dir -vvv"
 
 requirements:
   host:
