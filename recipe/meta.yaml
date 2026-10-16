@@ -1,5 +1,5 @@
 {% set name = "coloraide" %}
-{% set version = "8.13" %}
+{% set version = "8.13.1" %}
 
 package:
   name: "{{ name|lower }}"
@@ -7,7 +7,7 @@ package:
 
 source:
   url: "https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: acd94d150268bf6e96568482943cb39bfe73a92a37c8912baf7506785996de58
+  sha256: 16e0341a6cd477bcd40e58e6af65cfb7a86614c215baa69132ae1847f6f2d34c
 
 build:
   number: 0
